@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fit Eleven GK2 Services — Personal Training, Boxing, MMA, Group Classes, Strength Training, Defence Classes, Steam & Sauna." />
+  <title>Services — Fit Eleven GK2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="asset/css/style.css" />
+</head>
+<body>
+
+  <div class="page-transition" aria-hidden="true"></div>
+  <div class="scroll-progress"  aria-hidden="true"></div>
+  <div id="cursor"       class="cursor"       aria-hidden="true"></div>
+  <div id="cursor-trail" class="cursor-trail"  aria-hidden="true"></div>
+
+  <!-- ─── Navigation ─── -->
+  <header>
+    <nav class="nav scrolled" role="navigation">
+      <a href="index.html" class="nav-logo">FIT <strong>ELEVEN</strong></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Free Trial</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-drawer" id="mobile-drawer" role="dialog">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" style="color:var(--red)">Free Trial →</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════
+         PAGE HERO
+    ══════════════════════════════ -->
+    <section class="page-hero" aria-label="Services hero">
+      <div class="page-hero-bg" aria-hidden="true"></div>
+      <div class="page-hero-content" style="max-width: 1400px; margin: 0 auto;">
+        <p class="section-label">What We Offer</p>
+        <h1 class="section-title" style="max-width: 640px;">
+          TRAIN LIKE A<br><span class="accent">CHAMPION.</span>
+        </h1>
+        <p class="section-subtitle" style="margin-top: 20px;">
+          Eight world-class programs designed to push every boundary —
+          from first-timers to elite athletes.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════
+         SERVICES PAGE GRID
+    ══════════════════════════════ -->
+    <section class="section" aria-label="All services">
+
+      <div class="services-page-grid stagger-group">
+
+        <!-- Featured card — Personal Training -->
+        <article class="card service-page-card featured" aria-label="Personal Training">
+          <div>
+            <div class="service-page-number" aria-hidden="true">01</div>
+            <span class="service-tag">Signature Program</span>
+            <h2 class="service-page-name">PERSONAL<br>TRAINING</h2>
+            <p class="service-page-desc">
+              The most focused, results-driven program at Fit Eleven. One trainer.
+              One plan. Built entirely around you — your body, your goals, your timeline.
+              No guesswork. Only results.
+            </p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">
+              Book a Session
+              <span class="btn-icon" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div>
+            <div class="service-page-features">
+              <div class="service-feature-item">Customised nutrition guidance</div>
+              <div class="service-feature-item">Progress tracking every session</div>
+              <div class="service-feature-item">Body composition analysis</div>
+              <div class="service-feature-item">Flexible scheduling — all hours</div>
+              <div class="service-feature-item">Injury rehabilitation support</div>
+              <div class="service-feature-item">Supplement & recovery advice</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Boxing & MMA -->
+        <article class="card service-page-card" aria-label="Boxing and MMA">
+          <div class="service-page-number" aria-hidden="true">02</div>
+          <span class="service-tag">Combat Sports</span>
+          <h3 class="service-page-name">BOXING<br>&amp; MMA</h3>
+          <p class="service-page-desc">
+            Kickboxing, Muay Thai, BJJ and full MMA. Train like a fighter —
+            develop explosive power, stamina, and mental toughness.
+          </p>
+          <div class="service-page-features">
+            <div class="service-feature-item">Kickboxing foundations</div>
+            <div class="service-feature-item">Muay Thai clinch work</div>
+            <div class="service-feature-item">BJJ ground game</div>
+            <div class="service-feature-item">6–8 person classes</div>
+          </div>
+          <div class="service-arrow" aria-hidden="true">Saturday &amp; Sunday → 11:00–13:00</div>
+        </article>
+
+        <!-- Group Classes -->
+        <article class="card service-page-card" aria-label="Group Classes">
+          <div class="service-page-number" aria-hidden="true">03</div>
+          <span class="service-tag">Group Energy</span>
+          <h3 class="service-page-name">GROUP<br>CLASSES</h3>
+          <p class="service-page-desc">
+            High-energy GX sessions. From Zumba and Dance Cardio to HIIT
+            and Bhangra bootcamps — sweat together, win together.
+          </p>
+          <div class="service-page-features">
+            <div class="service-feature-item">Zumba &amp; Dance Cardio</div>
+            <div class="service-feature-item">HIIT &amp; Tabata</div>
+            <div class="service-feature-item">Bhangra &amp; Bolly Dance</div>
+            <div class="service-feature-item">Multiple weekly slots</div>
+          </div>
+          <div class="service-arrow" aria-hidden="true">Open to all members</div>
+        </article>
+
+        <!-- Strength Training -->
+        <article class="card service-page-card" aria-label="Strength Training">
+          <div class="service-page-number" aria-hidden="true">04</div>
+          <span class="service-tag">Core Program</span>
+          <h3 class="service-page-name">STRENGTH<br>TRAINING</h3>
+          <p class="service-page-desc">
+            Progressive overload, compound lifts, and functional strength.
+            Our strength floor is equipped with everything you need to get
+            seriously strong.
+          </p>
+          <div class="service-page-features">
+            <div class="service-feature-item">Elite free weights zone</div>
+            <div class="service-feature-item">Functional training rig</div>
+            <div class="service-feature-item">Plate-loaded machines</div>
+            <div class="service-feature-item">Guided programming</div>
+          </div>
+          <div class="service-arrow" aria-hidden="true">Available all hours</div>
+        </article>
+
+        <!-- Defence Classes -->
+        <article class="card service-page-card" aria-label="Defence Classes">
+          <div class="service-page-number" aria-hidden="true">05</div>
+          <span class="service-tag">Self Defence</span>
+          <h3 class="service-page-name">DEFENCE<br>CLASSES</h3>
+          <p class="service-page-desc">
+            Professional Boxing &amp; MMA defence program. Learn to protect
+            yourself. Build confidence, agility, and real-world combat skills.
+          </p>
+          <div class="service-page-features">
+            <div class="service-feature-item">Self-protection techniques</div>
+            <div class="service-feature-item">Strength &amp; agility training</div>
+            <div class="service-feature-item">Expert coaching only</div>
+            <div class="service-feature-item">Limited — 6–8 people</div>
+          </div>
+          <div class="service-arrow" aria-hidden="true">Limited Seats — Contact Today</div>
+        </article>
+
+        <!-- Outdoor Bootcamp -->
+        <article class="card service-page-card" aria-label="Outdoor Bootcamp">
+          <div class="service-page-number" aria-hidden="true">06</div>
+          <span class="service-tag">Outdoor</span>
+          <h3 class="service-page-name">OUTDOOR<br>BOOTCAMP</h3>
+          <p class="service-page-desc">
+            Take training outside. Power-packed sessions at M Block Park —
+            functional movement, team challenges, and raw fitness in the open air.
+          </p>
+          <div class="service-page-features">
+            <div class="service-feature-item">M Block Park, GK2</div>
+            <div class="service-feature-item">Weekend sessions</div>
+            <div class="service-feature-item">Team challenges</div>
+            <div class="service-feature-item">Open for all members</div>
+          </div>
+          <div class="service-arrow" aria-hidden="true">Weekend mornings</div>
+        </article>
+
+        <!-- Cardio Zone -->
+        <article class="card service-page-card" aria-label="Premium Cardio Zone">
+          <div class="service-page-number" aria-hidden="true">07</div>
+          <span class="service-tag">Facility</span>
+          <h3 class="service-page-name">CARDIO<br>ZONE</h3>
+          <p class="service-page-desc">
+            Dedicated 1st-floor cardio zone with advanced treadmills, cross trainers,
+            bikes, and rowing machines. Premium equipment only.
+          </p>
+          <div class="service-page-features">
+            <div class="service-feature-item">Advanced treadmills</div>
+            <div class="service-feature-item">Elliptical &amp; cross trainers</div>
+            <div class="service-feature-item">Rowing machines</div>
+            <div class="service-feature-item">Air bikes</div>
+          </div>
+          <div class="service-arrow" aria-hidden="true">1st Floor</div>
+        </article>
+
+        <!-- Steam & Sauna -->
+        <article class="card service-page-card" aria-label="Steam and Sauna">
+          <div class="service-page-number" aria-hidden="true">08</div>
+          <span class="service-tag">Recovery</span>
+          <h3 class="service-page-name">STEAM<br>&amp; SAUNA</h3>
+          <p class="service-page-desc">
+            Because recovery is training. Steam rooms and sauna facilities
+            to accelerate muscle repair, reduce stress, and feel premium
+            after every session.
+          </p>
+          <div class="service-page-features">
+            <div class="service-feature-item">Steam room</div>
+            <div class="service-feature-item">Dry sauna</div>
+            <div class="service-feature-item">Post-workout recovery</div>
+            <div class="service-feature-item">Member access</div>
+          </div>
+          <div class="service-arrow" aria-hidden="true">Premium Member Access</div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════
+         CLASS SCHEDULE TABLE
+    ══════════════════════════════ -->
+    <section class="section" style="background: var(--bg-2);" aria-label="Class schedule">
+
+      <p class="section-label g-fade-up">Weekly Schedule</p>
+      <h2 class="section-title g-fade-up" data-delay="0.1">
+        PLAN YOUR<br><span class="accent">WEEK</span>
+      </h2>
+
+      <div style="margin-top: 48px; overflow-x: auto;">
+        <table class="schedule-table" role="table">
+          <thead>
+            <tr>
+              <th scope="col">Class</th>
+              <th scope="col">Type</th>
+              <th scope="col">Days</th>
+              <th scope="col">Time</th>
+              <th scope="col">Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Boxing &amp; Kickboxing</strong></td>
+              <td>Combat</td>
+              <td>Sat &amp; Sun</td>
+              <td>11:00 – 12:00</td>
+              <td><span class="schedule-badge limited">Limited – 6–8</span></td>
+            </tr>
+            <tr>
+              <td><strong>Muay Thai</strong></td>
+              <td>Combat</td>
+              <td>Sat &amp; Sun</td>
+              <td>12:00 – 13:00</td>
+              <td><span class="schedule-badge limited">Limited – 6–8</span></td>
+            </tr>
+            <tr>
+              <td><strong>Zumba / Dance Cardio</strong></td>
+              <td>Group GX</td>
+              <td>Mon, Wed, Fri</td>
+              <td>07:00 – 08:00</td>
+              <td><span class="schedule-badge open">Open</span></td>
+            </tr>
+            <tr>
+              <td><strong>HIIT Bootcamp</strong></td>
+              <td>Group GX</td>
+              <td>Tue, Thu</td>
+              <td>07:00 – 08:00</td>
+              <td><span class="schedule-badge open">Open</span></td>
+            </tr>
+            <tr>
+              <td><strong>Outdoor Bootcamp</strong></td>
+              <td>Outdoor</td>
+              <td>Sat</td>
+              <td>06:30 – 07:30</td>
+              <td><span class="schedule-badge open">Open</span></td>
+            </tr>
+            <tr>
+              <td><strong>Personal Training</strong></td>
+              <td>1-on-1</td>
+              <td>All Week</td>
+              <td>By Appointment</td>
+              <td><span class="schedule-badge open">Available</span></td>
+            </tr>
+            <tr>
+              <td><strong>Strength &amp; Cardio Floor</strong></td>
+              <td>Self-directed</td>
+              <td>All Week</td>
+              <td>06:00 – 22:00</td>
+              <td><span class="schedule-badge open">Always Open</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════
+         CTA
+    ══════════════════════════════ -->
+    <section class="cta-section" aria-label="Get started">
+      <div class="cta-bg-glow" aria-hidden="true"></div>
+      <div class="cta-bg-grid" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <p class="section-label">Ready to Start?</p>
+        <h2 class="cta-title">YOUR FIRST<br><span class="text-red">SESSION'S FREE</span></h2>
+        <p class="cta-subtitle">
+          Try any class, any program — completely on us.
+          No contract. No card required. Just show up.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+919266553555" class="btn btn-primary" style="padding: 18px 48px;">
+            📞 &nbsp;Call to Book
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            Send a Message
+          </a>
+        </div>
+        <p class="cta-footnote">+91 92665 53555 · +91 92665 59555</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">FIT <strong>ELEVEN</strong> GK2</div>
+        <p class="footer-tagline">Delhi's most premium fitness destination.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fitelevengk2" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="tel:+919266553555" class="social-link" aria-label="Call">📞</a>
+          <a href="https://maps.app.goo.gl/wvD6siU8E4dqqBYNA" target="_blank" rel="noopener" class="social-link" aria-label="Maps">📍</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Programs</p>
+        <ul class="footer-links">
+          <li><a href="services.html">Personal Training</a></li>
+          <li><a href="services.html">Boxing &amp; MMA</a></li>
+          <li><a href="services.html">Group Classes</a></li>
+          <li><a href="services.html">Defence Classes</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon">📍</span>
+          <p class="footer-contact-text">M Block Market, GK II, New Delhi</p>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon">📞</span>
+          <p class="footer-contact-text"><a href="tel:+919266553555" style="color:inherit">+91 92665 53555</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Fit Eleven GK2. All rights reserved.</p>
+      <nav class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></nav>
+    </div>
+  </footer>
+
+  <div class="float-cta">
+    <a href="tel:+919266553555" class="float-cta-btn">📞 &nbsp;Free Trial</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="asset/js/main.js"></script>
+  <script src="asset/js/animations.js"></script>
+</body>
+</html>

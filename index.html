@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fit Eleven GK2 — Delhi's most premium fitness & lifestyle gym in Greater Kailash II. Certified trainers, elite equipment, Boxing, MMA, Group Classes." />
+  <title>Fit Eleven GK2 — Premium Fitness & Lifestyle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="asset/css/style.css" />
+</head>
+<body>
+
+  <!-- ─── Page Transition Overlay ─── -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- ─── Scroll Progress ─── -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ─── Custom Cursor ─── -->
+  <div id="cursor"       class="cursor"       aria-hidden="true"></div>
+  <div id="cursor-trail" class="cursor-trail"  aria-hidden="true"></div>
+
+  <!-- ─── Loader ─── -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-logo">FIT <span>ELEVEN</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ─── Navigation ─── -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Fit Eleven GK2 Home">
+        FIT <strong>ELEVEN</strong>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"    class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="nav-cta">Free Trial</a>
+
+      <button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" style="color: var(--red);">Free Trial →</a>
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════
+       SECTION 1 — HERO
+  ══════════════════════════════ -->
+  <main>
+    <section class="hero" id="hero" aria-label="Hero">
+
+      <!-- Background layers -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-noise"></div>
+      </div>
+
+      <!-- Floating orb -->
+      <div class="hero-orb" aria-hidden="true">
+        <div class="hero-orb-inner">FIT XI</div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero-content">
+
+        <p class="hero-eyebrow">
+          <span aria-hidden="true"></span>
+          Greater Kailash II · New Delhi
+        </p>
+
+        <h1 class="hero-headline">
+          <span class="line-block"><span class="h-line">BUILD</span></span>
+          <span class="line-block"><span class="h-line">POWER.</span></span>
+          <span class="line-block"><span class="h-line line-red">DISCIPLINE.</span></span>
+        </h1>
+
+        <div class="hero-bottom">
+          <p class="hero-sub">
+            Delhi's most premium fitness destination — where certified coaches,
+            elite machines, and a relentless community forge champions.
+          </p>
+
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">
+              Start Free Trial
+              <span class="btn-icon" aria-hidden="true">→</span>
+            </a>
+            <a href="services.html" class="btn btn-outline">
+              Our Programs
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="hero-scroll-line"></div>
+        <span class="hero-scroll-label">Scroll</span>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════
+         SECTION 2 — TICKER BAND
+    ══════════════════════════════ -->
+    <div class="ticker-band" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Premium Gym</span>
+        <span class="ticker-item">Certified Trainers</span>
+        <span class="ticker-item">Boxing &amp; MMA</span>
+        <span class="ticker-item">Group Classes</span>
+        <span class="ticker-item">Steam &amp; Sauna</span>
+        <span class="ticker-item">Strength Training</span>
+        <span class="ticker-item">Outdoor Bootcamp</span>
+        <span class="ticker-item">Defence Classes</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="ticker-item">Premium Gym</span>
+        <span class="ticker-item">Certified Trainers</span>
+        <span class="ticker-item">Boxing &amp; MMA</span>
+        <span class="ticker-item">Group Classes</span>
+        <span class="ticker-item">Steam &amp; Sauna</span>
+        <span class="ticker-item">Strength Training</span>
+        <span class="ticker-item">Outdoor Bootcamp</span>
+        <span class="ticker-item">Defence Classes</span>
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════
+         SECTION 3 — STATS
+    ══════════════════════════════ -->
+    <div class="stats-band" aria-label="Key statistics">
+      <div class="stat-item">
+        <div class="stat-num">570<sup>+</sup></div>
+        <div class="stat-label">Active Members</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">12<sup>+</sup></div>
+        <div class="stat-label">Certified Trainers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8<sup>+</sup></div>
+        <div class="stat-label">Programs</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1<sup>yr</sup></div>
+        <div class="stat-label">Of Excellence</div>
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════
+         SECTION 4 — FEATURES
+    ══════════════════════════════ -->
+    <section class="section feature-section" id="features" aria-label="Key features">
+
+      <div class="feature-header">
+        <div>
+          <p class="section-label">Why Choose Us</p>
+          <h2 class="section-title">BUILT FOR<br><span class="accent">CHAMPIONS</span></h2>
+        </div>
+        <p class="section-subtitle">
+          Every detail of Fit Eleven GK2 has been engineered to deliver
+          the most premium fitness experience in Delhi.
+        </p>
+      </div>
+
+      <!-- Cards — GSAP stagger via .stagger-group -->
+      <div class="feature-grid stagger-group">
+
+        <article class="card feature-card" aria-label="World-class equipment">
+          <div class="feature-icon" aria-hidden="true">🏋️</div>
+          <h3 class="feature-title">Elite Equipment</h3>
+          <p class="feature-desc">
+            World-class machines built for performance. From advanced cardio zones to
+            free weight stations — only the best.
+          </p>
+        </article>
+
+        <article class="card feature-card" aria-label="Certified trainers">
+          <div class="feature-icon" aria-hidden="true">🎯</div>
+          <h3 class="feature-title">Expert Coaches</h3>
+          <p class="feature-desc">
+            Certified trainers with proven methodologies, dedicated to your
+            goals and your results.
+          </p>
+        </article>
+
+        <!-- Wide card -->
+        <article class="card feature-card" aria-label="Premium amenities" style="padding: 36px 40px; display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: center;">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="feature-icon" aria-hidden="true">🔥</div>
+            <h3 class="feature-title">Premium Amenities</h3>
+            <p class="feature-desc" style="max-width: 260px;">Steam rooms, sauna, dedicated recovery zones — because peak performance demands premium recovery.</p>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; justify-content: flex-end;">
+            <div style="padding: 12px 20px; background: var(--red-dim); border: 1px solid var(--border-red); border-radius: var(--radius-md); font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--red);">STEAM</div>
+            <div style="padding: 12px 20px; background: var(--red-dim); border: 1px solid var(--border-red); border-radius: var(--radius-md); font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--red);">SAUNA</div>
+            <div style="padding: 12px 20px; background: var(--red-dim); border: 1px solid var(--border-red); border-radius: var(--radius-md); font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--red);">CARDIO</div>
+            <div style="padding: 12px 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; color: var(--grey-hi);">RECOVERY</div>
+          </div>
+        </article>
+
+        <article class="card feature-card" aria-label="Community">
+          <div class="feature-icon" aria-hidden="true">💪</div>
+          <h3 class="feature-title">Community Power</h3>
+          <p class="feature-desc">
+            570+ members strong. Events, bootcamps, and group challenges
+            that keep you motivated every day.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════
+         SECTION 5 — SERVICES GRID
+    ══════════════════════════════ -->
+    <section class="section" id="services" aria-label="Services">
+
+      <p class="section-label g-fade-up">Our Programs</p>
+      <h2 class="section-title g-fade-up" data-delay="0.1">TRAIN LIKE A<br><span class="accent">CHAMPION</span></h2>
+
+      <div class="services-grid stagger-group" style="margin-top: 56px;">
+
+        <article class="card service-card" aria-label="Personal Training">
+          <span class="service-number" aria-hidden="true">01</span>
+          <span class="service-tag">1-on-1</span>
+          <h3 class="service-name">Personal<br>Training</h3>
+          <p class="service-desc">Customised plans, constant accountability, guaranteed results. Your goals — our obsession.</p>
+          <div class="service-arrow" aria-hidden="true">Explore <span>→</span></div>
+        </article>
+
+        <article class="card service-card" aria-label="Boxing and MMA">
+          <span class="service-number" aria-hidden="true">02</span>
+          <span class="service-tag">Combat</span>
+          <h3 class="service-name">Boxing<br>&amp; MMA</h3>
+          <p class="service-desc">Kickboxing, Muay Thai, BJJ &amp; defence programs. Train like a fighter, move like a champion.</p>
+          <div class="service-arrow" aria-hidden="true">Explore <span>→</span></div>
+        </article>
+
+        <article class="card service-card" aria-label="Group Classes">
+          <span class="service-number" aria-hidden="true">03</span>
+          <span class="service-tag">Group</span>
+          <h3 class="service-name">Group<br>Classes</h3>
+          <p class="service-desc">High-energy GX — Zumba, HIIT, dance, bootcamp. Work hard, sweat together, win together.</p>
+          <div class="service-arrow" aria-hidden="true">Explore <span>→</span></div>
+        </article>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 44px;">
+        <a href="services.html" class="btn btn-outline g-fade-up">
+          View All Programs
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════
+         SECTION 6 — EXPERIENCE SPLIT
+    ══════════════════════════════ -->
+    <section class="experience-split" id="experience" aria-label="The Fit Eleven experience">
+
+      <!-- Visual side -->
+      <div class="experience-visual">
+        <div class="experience-visual-inner parallax-bg">
+          <div class="experience-visual-text">FIT<br>ELEVEN<br>GK2</div>
+        </div>
+        <div class="experience-overlay" aria-hidden="true"></div>
+
+        <div class="experience-badge g-scale-in">
+          <div class="experience-badge-num">GK2</div>
+          <div class="experience-badge-label">Greater<br>Kailash II</div>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div class="experience-text">
+        <p class="section-label g-fade-left">The Fit Eleven Experience</p>
+        <h2 class="section-title g-fade-left" data-delay="0.1">
+          WHERE ELITE<br><span class="accent">TRAINS ELITE</span>
+        </h2>
+        <p class="section-subtitle g-fade-left" data-delay="0.2">
+          Not just a gym — a philosophy. A space designed to challenge you, elevate you,
+          and transform you into the most disciplined version of yourself.
+        </p>
+
+        <div class="experience-pillars">
+          <div class="pillar">
+            <div class="pillar-dot" aria-hidden="true"></div>
+            <span class="pillar-name">Premium cardio zone — 1st floor</span>
+            <span class="pillar-detail">Advanced treadmills</span>
+          </div>
+          <div class="pillar">
+            <div class="pillar-dot" aria-hidden="true"></div>
+            <span class="pillar-name">Steam &amp; Sauna recovery</span>
+            <span class="pillar-detail">Post-workout</span>
+          </div>
+          <div class="pillar">
+            <div class="pillar-dot" aria-hidden="true"></div>
+            <span class="pillar-name">Defence classes — Sat &amp; Sun</span>
+            <span class="pillar-detail">6–8 seats only</span>
+          </div>
+          <div class="pillar">
+            <div class="pillar-dot" aria-hidden="true"></div>
+            <span class="pillar-name">Outdoor bootcamp sessions</span>
+            <span class="pillar-detail">M Block Park</span>
+          </div>
+          <div class="pillar">
+            <div class="pillar-dot" aria-hidden="true"></div>
+            <span class="pillar-name">Community events &amp; challenges</span>
+            <span class="pillar-detail">Monthly</span>
+          </div>
+        </div>
+
+        <a href="about.html" class="btn btn-primary g-fade-left" style="margin-top: 40px;" data-delay="0.4">
+          Our Story
+          <span class="btn-icon" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════
+         SECTION 7 — SECOND TICKER
+    ══════════════════════════════ -->
+    <div class="ticker-band" aria-hidden="true" style="background: transparent; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 0;">
+      <div class="ticker-track reverse" style="animation-duration: 28s;">
+        <span class="ticker-item" style="color: var(--grey-hi);">Consistency</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Discipline</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Strength</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Power</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Endurance</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Community</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Results</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Excellence</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Consistency</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Discipline</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Strength</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Power</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Endurance</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Community</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Results</span>
+        <span class="ticker-item" style="color: var(--grey-hi);">Excellence</span>
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════
+         SECTION 8 — CTA FINAL
+    ══════════════════════════════ -->
+    <section class="cta-section" id="cta" aria-label="Call to action">
+      <div class="cta-bg-glow"  aria-hidden="true"></div>
+      <div class="cta-bg-grid"  aria-hidden="true"></div>
+
+      <div class="cta-inner">
+        <p class="section-label">Limited Spots Available</p>
+        <h2 class="cta-title">
+          JOIN THE<br><span class="text-red">ELITE</span>
+        </h2>
+        <p class="cta-subtitle">
+          Your first session is on us. Walk in, feel the energy, and
+          decide if you're ready to become your best self.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+919266553555" class="btn btn-primary" style="font-size: 0.88rem; padding: 18px 48px;">
+            📞 &nbsp;Book Free Trial
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            Get in Touch
+          </a>
+        </div>
+        <p class="cta-footnote">No commitment. No card. Just show up.</p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">FIT <strong>ELEVEN</strong> GK2</div>
+        <p class="footer-tagline">
+          Delhi's most premium fitness destination. Where certified trainers,
+          elite machines, and a relentless community forge champions.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/fitelevengk2" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+          <a href="tel:+919266553555" class="social-link" aria-label="Call us">📞</a>
+          <a href="https://maps.app.goo.gl/wvD6siU8E4dqqBYNA" target="_blank" rel="noopener" class="social-link" aria-label="Find us on maps">📍</a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Free Trial</a></li>
+        </ul>
+      </div>
+
+      <!-- Programs -->
+      <div>
+        <p class="footer-col-title">Programs</p>
+        <ul class="footer-links">
+          <li><a href="services.html">Personal Training</a></li>
+          <li><a href="services.html">Boxing &amp; MMA</a></li>
+          <li><a href="services.html">Group Classes</a></li>
+          <li><a href="services.html">Strength Training</a></li>
+          <li><a href="services.html">Defence Classes</a></li>
+          <li><a href="services.html">Outdoor Bootcamp</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <p class="footer-col-title">Contact</p>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon" aria-hidden="true">📍</span>
+          <p class="footer-contact-text">M Block Market, Greater Kailash II<br>New Delhi — 110048</p>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon" aria-hidden="true">📞</span>
+          <p class="footer-contact-text">
+            <a href="tel:+919266553555" style="color: inherit;">+91 92665 53555</a><br>
+            <a href="tel:+919266559555" style="color: inherit;">+91 92665 59555</a>
+          </p>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-icon" aria-hidden="true">📷</span>
+          <p class="footer-contact-text">
+            <a href="https://www.instagram.com/fitelevengk2" target="_blank" rel="noopener" style="color: inherit;">@fitelevengk2</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Fit Eleven Greater Kailash II. All rights reserved.</p>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+
+
+  <!-- ─── Floating CTA ─── -->
+  <div class="float-cta" aria-label="Quick contact">
+    <a href="tel:+919266553555" class="float-cta-btn">
+      📞 &nbsp;Free Trial
+    </a>
+  </div>
+
+
+  <!-- ─── Scripts ─── -->
+  <!-- GSAP Core + ScrollTrigger from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Our JS files -->
+  <script src="asset/js/main.js"></script>
+  <script src="asset/js/animations.js"></script>
+
+</body>
+</html>

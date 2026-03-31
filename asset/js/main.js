@@ -350,4 +350,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ── 13. EXPERIENCE ACCORDION ──────────────────────────────── */
+  const expAccordionItems = document.querySelectorAll('.experience-accordion-item');
+
+  if (expAccordionItems.length) {
+    expAccordionItems.forEach(item => {
+      const header = item.querySelector('.experience-accordion-header');
+      const body   = item.querySelector('.experience-accordion-body');
+      if (!header || !body) return;
+
+      /* Set initial heights */
+      if (!item.classList.contains('open')) {
+        body.style.height = '0px';
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.height = 'auto';
+        body.style.overflow = 'hidden';
+      }
+
+      header.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        /* Close all */
+        expAccordionItems.forEach(i => {
+          i.classList.remove('open');
+          const b = i.querySelector('.experience-accordion-body');
+          if (b) {
+            b.style.height = b.scrollHeight + 'px';
+            requestAnimationFrame(() => {
+              b.style.transition = 'height 0.38s cubic-bezier(0.16,1,0.3,1)';
+              b.style.height = '0px';
+            });
+          }
+        });
+
+        /* Open clicked if was closed */
+        if (!isOpen) {
+          item.classList.add('open');
+          body.style.height = '0px';
+          body.style.transition = 'height 0.42s cubic-bezier(0.16,1,0.3,1)';
+          requestAnimationFrame(() => {
+            body.style.height = body.scrollHeight + 'px';
+          });
+          /* After transition, set auto so content can resize */
+          body.addEventListener('transitionend', () => {
+            if (item.classList.contains('open')) body.style.height = 'auto';
+          }, { once: true });
+        }
+      });
+    });
+  }
+
 }); /* End DOMContentLoaded */

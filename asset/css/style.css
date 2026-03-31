@@ -220,15 +220,15 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   text-transform: uppercase;
   color: var(--white);
   background: var(--red);
-  padding: 11px 26px;
-  border-radius: 60px;
+  padding: 10px 22px;
+  border-radius: 4px;
   transition: transform 0.3s var(--ease-out),
               box-shadow 0.3s,
               background 0.3s;
 }
 
 .nav-cta:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 0 8px 28px var(--red-glow);
   background: #ff1020;
 }
@@ -372,45 +372,43 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
 .btn-primary {
   background: var(--red);
   color: var(--white);
-  padding: 16px 40px;
-  border-radius: 60px;
+  padding: 15px 36px;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(229,9,20,0.25);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 40px var(--red-glow);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 16px 48px var(--red-glow);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--white);
-  padding: 15px 38px;
-  border-radius: 60px;
-  border: 1px solid var(--border);
+  padding: 14px 34px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.18);
 }
 
 .btn-outline:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px) scale(1.01);
   border-color: var(--red);
   color: var(--red);
+  box-shadow: inset 0 0 0 1px var(--border-red);
 }
 
 .btn-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--red-dim);
-  border: 1px solid var(--border-red);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.3s, transform 0.3s var(--ease-out);
+  transition: transform 0.3s var(--ease-out);
+  font-style: normal;
+  line-height: 1;
 }
 
 .btn:hover .btn-icon {
-  background: var(--red);
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 /* ── Ticker / Marquee ──────────────────────────────────────── */
@@ -472,6 +470,7 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03);
   transition: transform 0.4s var(--ease-out),
               border-color 0.4s,
               box-shadow 0.4s;
@@ -492,7 +491,7 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
 .card:hover {
   transform: translateY(-6px);
   border-color: var(--border-red);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px var(--border-red);
+  box-shadow: 0 28px 64px rgba(0,0,0,0.45), 0 0 0 1px var(--border-red), inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .card:hover::before { opacity: 1; }
@@ -521,14 +520,15 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
   flex-shrink: 0;
-  transition: background 0.3s, box-shadow 0.3s;
+  color: var(--red);
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 .card:hover .feature-icon {
   background: var(--red);
   box-shadow: 0 8px 24px var(--red-glow);
+  color: var(--white);
 }
 
 .feature-title {
@@ -685,9 +685,10 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 70% 50%, rgba(229,9,20,0.1) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(229,9,20,0.06) 0%, transparent 60%),
-    linear-gradient(160deg, #0B0B0B 0%, #130303 50%, #0B0B0B 100%);
+    radial-gradient(ellipse 55% 65% at 72% 52%, rgba(229,9,20,0.13) 0%, transparent 65%),
+    radial-gradient(ellipse 35% 40% at 18% 82%, rgba(229,9,20,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 30% at 50% 0%, rgba(0,0,0,0.5) 0%, transparent 100%),
+    linear-gradient(170deg, #0B0B0B 0%, #130303 45%, #0B0B0B 100%);
 }
 
 .hero-grid-lines {
@@ -717,7 +718,7 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   position: relative;
   z-index: 2;
   padding: 0 var(--side-pad);
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
@@ -732,7 +733,7 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--red);
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .hero-eyebrow span {
@@ -747,8 +748,9 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   font-size: clamp(4.5rem, 12vw, 11rem);
   line-height: 0.88;
   letter-spacing: 2px;
-  margin-bottom: 36px;
+  margin-bottom: 48px;
   overflow: hidden;
+  text-shadow: 0 4px 40px rgba(0,0,0,0.4);
 }
 
 .hero-headline .line-block {
@@ -898,88 +900,8 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   margin-top: 56px;
 }
 
-/* Experience Split */
-.experience-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  min-height: 600px;
-}
-
-.experience-visual {
-  position: relative;
-  background: #111;
-  overflow: hidden;
-}
-
-.experience-visual-inner {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #1c0505, #0d0d0d);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.8s var(--ease-out);
-}
-
-.experience-visual:hover .experience-visual-inner {
-  transform: scale(1.04);
-}
-
-.experience-visual-text {
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 8vw, 8rem);
-  color: rgba(229,9,20,0.1);
-  letter-spacing: 4px;
-  text-align: center;
-  line-height: 1;
-}
-
-.experience-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, transparent 60%, rgba(11,11,11,0.8));
-}
-
-.experience-badge {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  background: var(--bg-glass);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 16px 24px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.experience-badge-num {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  color: var(--red);
-  line-height: 1;
-}
-
-.experience-badge-label {
-  font-family: var(--font-head);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--grey-hi);
-  line-height: 1.5;
-}
-
-.experience-text {
-  padding: 80px 72px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-  background: var(--bg-2);
-}
+/* Experience Split — moved to float-cta section below */
+/* .experience-split, .experience-visual, .experience-text are redefined below */
 
 .experience-pillars {
   display: flex;
@@ -1187,7 +1109,16 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   transform: translateY(-4px);
 }
 
-.value-icon { font-size: 1.4rem; margin-bottom: 10px; }
+.value-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: var(--red);
+  flex-shrink: 0;
+}
 
 .value-name {
   font-family: var(--font-head);
@@ -1557,7 +1488,6 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
   color: var(--grey-hi);
   transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.3s var(--ease-out);
   cursor: none;
@@ -1641,7 +1571,13 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   margin-bottom: 12px;
 }
 
-.footer-contact-icon { color: var(--red); font-size: 1rem; margin-top: 2px; flex-shrink: 0; }
+.footer-contact-icon {
+  color: var(--red);
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
 
 .footer-contact-text {
   font-size: 0.83rem;
@@ -1703,7 +1639,7 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   background: var(--red);
   color: var(--white);
   padding: 13px 24px;
-  border-radius: 60px;
+  border-radius: 4px;
   font-family: var(--font-head);
   font-size: 0.72rem;
   font-weight: 700;
@@ -1715,8 +1651,149 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
 }
 
 .float-cta-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.02);
   box-shadow: 0 16px 48px var(--red-glow);
+}
+
+/* ── Experience Split — Sticky Logo + Accordion ─────────────── */
+.experience-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.experience-visual {
+  position: sticky;
+  top: var(--nav-h);
+  height: calc(100vh - var(--nav-h));
+  background: #0d0d0d;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-logo-img {
+  width: 72%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  display: block;
+}
+
+.experience-visual-inner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(229,9,20,0.04), transparent 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-visual-inner .experience-visual-text {
+  display: none;
+}
+
+/* Accordion layout for experience text panel */
+.experience-text {
+  padding: 80px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 36px;
+  background: var(--bg-2);
+  min-height: calc(100vh - var(--nav-h));
+}
+
+.experience-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.experience-accordion-item {
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.experience-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  cursor: none;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.experience-accordion-header:hover { color: var(--red); }
+
+.experience-accordion-title {
+  font-family: var(--font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: color 0.3s;
+}
+
+.experience-accordion-header:hover .experience-accordion-title {
+  color: var(--red);
+}
+
+.experience-accordion-title .acc-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 var(--red-glow);
+  transition: box-shadow 0.3s;
+}
+
+.experience-accordion-header:hover .acc-dot {
+  box-shadow: 0 0 10px var(--red-glow);
+}
+
+.experience-accordion-meta {
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--grey-lo);
+  transition: color 0.3s;
+  flex-shrink: 0;
+}
+
+.experience-accordion-header:hover .experience-accordion-meta {
+  color: var(--grey-hi);
+}
+
+.experience-accordion-body {
+  height: 0;
+  overflow: hidden;
+}
+
+.experience-accordion-body-inner {
+  padding: 0 0 20px 23px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--grey-hi);
+  line-height: 1.85;
+  border-left: 1px solid var(--border-red);
+  margin-left: 3px;
+}
+
+.experience-accordion-item.open .experience-accordion-body {
+  height: auto;
 }
 
 /* ── Page Transition ────────────────────────────────────────── */
@@ -1742,7 +1819,13 @@ body.cursor-hover .cursor-trail  { width: 52px; height: 52px; opacity: 0.15; }
   .feature-grid .card:nth-child(3) { grid-column: span 1; }
   .services-grid     { grid-template-columns: repeat(2, 1fr); }
   .experience-split  { grid-template-columns: 1fr; }
-  .experience-text   { padding: 60px 40px; }
+  .experience-visual {
+    position: relative;
+    top: auto;
+    height: 60vw;
+    max-height: 480px;
+  }
+  .experience-text   { padding: 60px 40px; min-height: auto; }
   .about-intro-grid  { grid-template-columns: 1fr; }
   .trainers-grid     { grid-template-columns: repeat(2, 1fr); }
   .footer-grid       { grid-template-columns: 1fr 1fr; gap: 40px; }

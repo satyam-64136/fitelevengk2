@@ -275,33 +275,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ── 10. PAGE TRANSITION ───────────────────────────────────── */
+  /*
+   *  The .page-transition overlay is HIDDEN by default in CSS
+   *  (clip-path: inset(0 0 100% 0)) so pages are always visible.
+   *
+   *  EXIT: when a link is clicked, the red curtain sweeps UP from
+   *  the bottom covering the page, then the browser navigates.
+   *  ENTRY: on the new page the overlay is already hidden (CSS default)
+   *  so there's no red screen — the page appears instantly clean.
+   */
   const transitionEl = document.querySelector('.page-transition');
 
   if (transitionEl) {
-    /* Reveal transition on page load */
-    gsap.from(transitionEl, {
-      scaleX: 1,
-      duration: 0.6,
-      ease: 'power3.inOut',
-      transformOrigin: 'right',
-      clearProps: 'all'
-    });
+    let isNavigating = false;
 
-    /* Animate out on internal link clicks */
     document.querySelectorAll('a[href]').forEach(link => {
+      if (link._transitionBound) return;
       const href = link.getAttribute('href');
-      /* Only intercept same-origin, non-hash, non-external links */
-      if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('tel') || href.startsWith('mailto')) return;
+      if (!href || href.startsWith('#') || href.startsWith('http') ||
+          href.startsWith('tel') || href.startsWith('mailto') ||
+          link.hasAttribute('target')) return;
+
+      link._transitionBound = true;
 
       link.addEventListener('click', (e) => {
+        if (isNavigating) return;
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+
         e.preventDefault();
-        gsap.to(transitionEl, {
-          scaleX: 1,
-          transformOrigin: 'left',
-          duration: 0.5,
-          ease: 'power3.inOut',
-          onComplete: () => { window.location.href = href; }
-        });
+        isNavigating = true;
+        transitionEl.style.pointerEvents = 'all';
+
+        gsap.fromTo(transitionEl,
+          { clipPath: 'inset(100% 0 0 0)' },  /* starts below viewport */
+          {
+            clipPath : 'inset(0 0 0 0)',       /* sweeps up, full cover */
+            duration : 0.45,
+            ease     : 'power3.inOut',
+            onComplete: () => { window.location.href = href; }
+          }
+        );
       });
     });
   }

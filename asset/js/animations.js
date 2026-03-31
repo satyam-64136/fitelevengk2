@@ -42,9 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .to(loaderLogo, { opacity: 0, y: -20, duration: 0.3, ease: 'power2.in' }, '-=0.2');
 
   } else {
-    /* Inner pages — subtle page-reveal */
-    gsap.from('main', { opacity: 0, y: 16, duration: 0.55, ease: E.soft, clearProps: 'all' });
-    initAllAnimations();
+    /* Inner pages — wait for curtain retract (0.65s) then init */
+    gsap.delayedCall(0.55, initAllAnimations);
   }
 
 
@@ -327,17 +326,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* ── 3M. Services page cards ────────────────────────────── */
-    const serviceCards = document.querySelectorAll('.service-page-card');
-    if (serviceCards.length) {
-      gsap.fromTo(serviceCards,
-        { opacity: 0, y: 56, scale: 0.95 },
-        {
-          opacity: 1, y: 0, scale: 1,
-          stagger : 0.15, duration: 0.9, ease: E.out,
-          scrollTrigger: { trigger: '.services-page-grid', start: 'top 82%', toggleActions: 'play none none none' }
-        }
-      );
+    /* ── 3M. Services page cards — alternating entry ──────────── */
+    const spGrid = document.querySelector('.services-page-grid');
+    if (spGrid) {
+      const spCards = spGrid.querySelectorAll('.card');
+      spCards.forEach((card, i) => {
+        const row    = Math.floor(i / 2);
+        const isLeft = i % 2 === 0;
+        gsap.fromTo(card,
+          { opacity: 0, x: isLeft ? -44 : 44, y: 32, scale: 0.96 },
+          {
+            opacity: 1, x: 0, y: 0, scale: 1,
+            duration: 0.9,
+            delay   : (row * 0.12) + (isLeft ? 0 : 0.06),
+            ease    : E.out,
+            scrollTrigger: { trigger: card, start: 'top 88%', toggleActions: 'play none none none' }
+          }
+        );
+      });
     }
 
 
@@ -385,6 +391,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       );
     }
+
+    /* ── 3P2. Service feature items stagger ─────────────────── */
+    document.querySelectorAll('.service-page-card').forEach(card => {
+      const featureItems = card.querySelectorAll('.service-feature-item');
+      if (!featureItems.length) return;
+      gsap.fromTo(featureItems,
+        { opacity: 0, x: -16 },
+        {
+          opacity: 1, x: 0,
+          stagger : 0.07, duration: 0.5, ease: E.soft,
+          scrollTrigger: { trigger: card, start: 'top 80%', toggleActions: 'play none none none' }
+        }
+      );
+    });
 
 
     /* ── 3Q. Ticker hover pause ─────────────────────────────── */
@@ -634,6 +654,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.stat-item').forEach(item => {
       item.addEventListener('mouseenter', () => gsap.to(item, { scale: 1.02, duration: 0.35, ease: E.soft }));
       item.addEventListener('mouseleave', () => gsap.to(item, { scale: 1,    duration: 0.45, ease: E.spring }));
+    });
+
+    /* Schedule table row hover highlight */
+    document.querySelectorAll('.schedule-table tbody tr').forEach(row => {
+      row.addEventListener('mouseenter', () => {
+        gsap.to(row, { x: 6, duration: 0.28, ease: E.soft });
+      });
+      row.addEventListener('mouseleave', () => {
+        gsap.to(row, { x: 0, duration: 0.38, ease: E.spring });
+      });
+    });
+
+    /* Service page card — feature items nudge on card hover */
+    document.querySelectorAll('.service-page-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const items = card.querySelectorAll('.service-feature-item');
+        gsap.to(items, { x: 4, stagger: 0.04, duration: 0.3, ease: E.soft });
+      });
+      card.addEventListener('mouseleave', () => {
+        const items = card.querySelectorAll('.service-feature-item');
+        gsap.to(items, { x: 0, stagger: 0.02, duration: 0.4, ease: E.spring });
+      });
     });
 
   } /* end pointer:fine */
